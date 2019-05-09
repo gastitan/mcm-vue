@@ -1,0 +1,20 @@
+{
+  "name": "vue-mcm",
+  "short_name": "vue-mcm",
+  "icons": [
+    {
+      "src": "/img/icons/matafuego_192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/img/icons/matafuego_512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ],
+  "start_url": "/index.html",
+  "display": "standalone",
+  "background_color": "#000000",
+  "theme_color": "#4DBA87"
+}
