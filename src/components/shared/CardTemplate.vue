@@ -67,9 +67,9 @@ export default {
     addToCart (product) {
       const data = _.find(this.$store.getters.cartProducts, product)
       if (data) {
-        infoToaster('Already Added', 'Product Already Added')
+        infoToaster('Producto agregado', 'El mismo producto ya ha sido agregado')
       } else {
-        successToaster('Added Successfully', 'Product Added Successfully')
+        successToaster('Producto agregado', 'Producto agregado al carrito')
         this.ADD_CART_LOCAL(product)
       }
     },

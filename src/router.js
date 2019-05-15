@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 import Home from './views/Home.vue'
-import toastr from './components/shared/service/ErrorHandler'
+//import toastr from './components/shared/service/ErrorHandler'
 import {
   isLoggedIn
 } from './components/shared/service/authService'
