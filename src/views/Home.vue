@@ -10,33 +10,23 @@
     </div>
     <nav aria-label="breadcrumb">
       <ol class="breadcrumb">
-        <li class="breadcrumb-item active" aria-current="page">Our Best Products</li>
-        <li class="ml-auto" aria-current="page"><router-link to="/products">Show All</router-link></li>
-      </ol>
-
-    </nav>
-    <BestProducts></BestProducts>
-    <nav aria-label="breadcrumb">
-      <ol class="breadcrumb">
-        <li class="breadcrumb-item active " aria-current="page">Our Top Products</li>
-        <li class="ml-auto" aria-current="page"><router-link to="/products">Show All</router-link></li>
+        <li class="breadcrumb-item active" aria-current="page">Productos destacados</li>
+        <li class="ml-auto" aria-current="page"><router-link to="/products">Todos</router-link></li>
       </ol>
     </nav>
-    <TopProducts></TopProducts>
+    <FeaturedProducts></FeaturedProducts>
   </div>
 </template>
 
 <script>
 // @ is an alias to /src
-import BestProducts from '@/components/products/BestProducts.vue'
-import TopProducts from '@/components/products/TopProducts.vue'
+import FeaturedProducts from '@/components/products/FeaturedProducts.vue'
 import StaticInfo from '@/assets/static_info.json'
 
 export default {
   name: 'home',
   components: {
-    BestProducts,
-    TopProducts
+    FeaturedProducts
   },
   data(){
     return {

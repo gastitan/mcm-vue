@@ -37,20 +37,8 @@
               <div class="row">
                 <div class="col">
                   <div class="form-group">
-                    <label for="isBestProduct">Best Product</label>
-                    <input type="checkbox" class="form-control" id="isBestProduct" name="isBestProduct" v-model="product.isBestProduct" placeholder="Password">
-                  </div>
-                </div>
-                <div class="col">
-                    <div class="form-group">
-                      <label for="isTopProduct">Top Product</label>
-                      <input type="checkbox" class="form-control" id="isTopProduct" name="isTopProduct" placeholder="Password" v-model="product.isTopProduct">
-                    </div>
-                </div>
-                <div class="col">
-                  <div class="form-group">
-                    <label for="productRating">Product Rating</label>
-                    <input type="password" class="form-control" id="productRating" placeholder="Password">
+                    <label for="isFeatured">Producto destacado</label>
+                    <input type="checkbox" class="form-control" id="isFeatured" name="isFeatured" v-model="product.isFeatured" >
                   </div>
                 </div>
               </div>

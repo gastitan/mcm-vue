@@ -1,5 +1,5 @@
 <template>
-  <div id="app" class="container">
+  <div id="app" class="container" style="margin:0;">
     <main>
       <nav class="navbar navbar-expand-lg navbar-light bg-light" id="nav">
         <img alt="Vue logo" src="../src/assets/logo.png" width="50px">
@@ -24,6 +24,9 @@
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#">Precios</a>
+            </li>
+            <li class="nav-item">
+              <router-link to="/contact" class="nav-link">Contactanos</router-link>
             </li>
             <li class="nav-item">
               <router-link to="/about" class="nav-link">Nosotros</router-link>
@@ -67,7 +70,38 @@
       <router-view/>
     </main>
 
-    <footer class="container-fluid footer text-left mt-3">
+
+
+<footer class="col-lg-12 col-md-12 col-sm-12 col-xs-12 footerPage">
+
+		<div class="container">
+
+			<!-- Redes Sociales Footer -->
+
+			<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 redesFooter">
+
+
+
+				<a href="https://www.facebook.com/elpixelmarketing/" target="_blank"><div class="fFooter"><i class="fa fa-facebook" aria-hidden="true"></i></div></a>		<!-- Facebook -->
+
+				<a href="https://twitter.com/elpixel" target="_blank"><div class="tFooter"><i class="fa fa-twitter" aria-hidden="true"></i></div></a>		<!-- Twitter -->
+
+				<a href="https://www.linkedin.com/company/elpixel-agencia-de-marketing-digital" target="_blank"><div class="lFooter"><i class="fa fa-linkedin" aria-hidden="true"></i></div></a>		<!-- Linkedin -->
+
+                <a href="https://www.behance.net/el-pixel" target="_blank"><div class="lFooter"><i class="fa fa-behance" aria-hidden="true"></i></div></a>		<!-- Behance -->
+
+				<a href="http://blog.elpixel.com" target="_blank"><div class="bFooter"><i class="fa fa-comment" aria-hidden="true"></i></div></a>		<!-- B -->
+
+
+
+			</div> <!-- / redes sociales footer -->
+
+		</div>
+
+	</footer>
+
+
+    <!--<footer class="container-fluid footer text-left mt-3">
       <p class="mr-auto">
         Developed by:
         <strong>Gastitan</strong>
@@ -78,12 +112,12 @@
         </a>
         <!--a href="https://github.com/ikismail" target="_blank" style="margin-right:10px">
           <i class="fa fa-github" aria-hidden="true" style="font-size:20px"></i>
-        </a-->
+        </a->
         <a href="https://www.linkedin.com/in/gaston-frias-086a8214/" target="_blank" style="margin-right:10px">
           <i class="fa fa-linkedin" aria-hidden="true" style="font-size:20px"></i>
         </a>
       </div>
-    </footer>
+    </footer>-->
   </div>
 </template>
 
@@ -217,4 +251,37 @@ footer {
 .buttonGreen:hover {
   background-color: #42a97b;
 }
+
+.footerPage {
+    background: linear-gradient(
+ to right, 
+ #252525 0%, 
+ #252525 50%, 
+ #282828 50%, 
+ #282828 100%
+ );
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
+.footerPage .redesFooter {
+    width: 70%;
+    float: none;
+    margin: auto;
+}
+
+a {
+    text-decoration: none;
+}
+
+.footerPage .fFooter {
+    height: 67px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 10%;
+    transition: all 0.5s ease-in-out;
+    font-size: 50px;
+    text-align: center;
+}
+
 </style>

@@ -5,12 +5,14 @@ import store from './store'
 import './registerServiceWorker'
 import VueAwesomeSwiper from 'vue-awesome-swiper'
 import NProgress from 'nprogress'
+import Vuelidate from 'vuelidate'
 
 // require styles
 import 'swiper/dist/css/swiper.css'
 import '../node_modules/nprogress/nprogress.css'
 
 Vue.use(VueAwesomeSwiper)
+Vue.use(Vuelidate)
 
 Vue.config.productionTip = false
 

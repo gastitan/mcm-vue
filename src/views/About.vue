@@ -4,8 +4,8 @@
       <div class="modal-content text-center">
         <div class="modal-header">
           <h4 class="modal-title" style="margin: 0 auto">
-            More About
-            <span style="color:crimson">ikismail</span>
+            Más acerca de 
+            <span style="color:crimson">MCM</span>
           </h4>
         </div>
         <div class="modal-body">
