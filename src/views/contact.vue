@@ -1,5 +1,6 @@
 <template>
   <div class="wrapper-form">
+    Ponete en contacto con nosotros y te llamaremos a la brevedad
     <form v-if="!isSubmitted" @submit.prevent="submit" novalidate class="center-50">
       <div class="form-group">
         <label for="firstName">Nombre *</label>
@@ -64,6 +65,39 @@
         <a href="#" class="btn btn-secondary" @click.prevent="reload()">Volver</a>
       </p>
     </div>
+    <section class="section contact-info">
+      <ul class="blocks-list">
+        <li class="contact-item">
+            <span class="icon" style="font-size:32px;line-height:normal;">
+                <i class="fas fa-store"></i>
+            </span>
+            <h4>HORARIO DE ATENCIÓN</h4>
+            <p>Lunes a Sábados de 9 a 18</p>
+        </li>
+        <li class="contact-item">
+           <span class="icon" style="font-size:32px;line-height:normal;">
+                <i class="fas fa-mobile-alt"></i>
+            </span>
+            <h4>LLAMANOS</h4>
+            <p>4612-4234</p>
+        </li>
+        <li class="contact-item">
+           <span class="icon" style="font-size:32px;line-height:normal;">
+                <i class="fas fa-envelope"></i>
+            </span>
+            <h4>ESCRIBINOS</h4>
+            <p><a href="mailto: matafuegos.mcm@gmail.com">matafuegos.mcm@gmail.com</a></p>
+        </li>
+        <li class="contact-item">
+            <span class="icon" style="font-size:32px;line-height:normal;">
+                <i class="fas fa-map-marked-alt"></i>
+            </span>
+            <h4>NUESTRA UBICACIÓN</h4>
+            <p>Condarco 364<br>Flores, CABA</p>
+        </li>
+      </ul>
+    </section>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3283.0978067860356!2d-58.470476684232295!3d-34.6269685662368!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcc98bfbeaaa45%3A0x273598b33ca66760!2sMatafuegos+MCM!5e0!3m2!1ses!2sar!4v1559138815007!5m2!1ses!2sar" width="100%" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
   </div>
 </template>
 
@@ -238,5 +272,35 @@ form {
 
 .center-50{
     width: 50%;
+}
+.blocks-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    list-style: none;
+    padding: 0;
+    margin: 0 -15px;
+}
+.contact-info .blocks-list {
+    align-items: flex-start;
+}
+.section {
+    margin-bottom: 60px;
+}
+.section.contact-info {
+    border-top: 1px solid #ddd;
+    margin-top: 30px;
+    padding-top: 60px;
+}
+.contact-item {
+    box-sizing: border-box;
+    color: #1d1d1d;
+    display: flex;
+    flex: 1 0 340px;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0 0 30px;
+    max-width: 100%;
+    text-align: center;
 }
 </style>

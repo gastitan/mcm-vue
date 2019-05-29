@@ -195,8 +195,8 @@ html {
   position: relative;
   min-height: 100%;
 }
-body {
-  margin-bottom: 60px; /* Margin bottom by footer height */
+.container {
+  max-width: 100%;
 }
 .footer {
   position: relative;
