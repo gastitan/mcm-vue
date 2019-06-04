@@ -1,5 +1,5 @@
 <template>
-    <div class="products">
+    <div class="products padding15">
         <div class="row">
         <div class="col-md-3 order-md-1 mb-4">
 

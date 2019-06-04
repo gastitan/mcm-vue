@@ -1,7 +1,10 @@
 <template>
-  <div class="wrapper-form">
+  <div class="wrapper-form  paddingtb15">
+    <div class="col-12 center-col margin-70px-bottom sm-margin-40px-bottom xs-margin-30px-bottom text-center">
+        <h3 class="font-weight-700 font-size32 md-font-size27 sm-font-size24 xs-font-size20 section-title">Contactanos</h3>
+    </div>
     Ponete en contacto con nosotros y te llamaremos a la brevedad
-    <form v-if="!isSubmitted" @submit.prevent="submit" novalidate class="center-50">
+    <form v-if="!isSubmitted" @submit.prevent="submit" novalidate class="offset-md-3 col-md-6 col-sm-3 col-lg-6">
       <div class="form-group">
         <label for="firstName">Nombre *</label>
         <input type="text" class="form-control" id="firstName" v-model.lazy.trim="form.firstName" @blur="onFieldBlur('firstName')" v-bind:class="getFieldClasses('firstName')">

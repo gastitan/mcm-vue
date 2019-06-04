@@ -1,23 +1,14 @@
 <template>
-  <div id="app" class="container" style="margin:0;">
+  <div id="app" class="container" style="margin:0; background: #efefef;">
     <main>
-      <nav class="navbar navbar-expand-lg navbar-light bg-light" id="nav">
-        <img alt="Vue logo" src="../src/assets/logo.png" width="50px">
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-toggle="collapse"
-          data-target="#navbarText"
-          aria-controls="navbarText"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
+      <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top" id="nav">
+        <router-link to="/" class="navbar-brand " >
+          <h1>MCM</h1>
+        </router-link>
         <div class="collapse navbar-collapse" id="navbarText">
           <ul class="navbar-nav mr-auto">
             <li class="nav-item active">
-              <router-link to="/" class="nav-link">Inicio</router-link>
+              <router-link to="/" class="nav-link"><span>Inicio</span></router-link>
             </li>
             <li class="nav-item">
               <router-link to="/products" class="nav-link">Productos</router-link>
@@ -67,38 +58,35 @@
           </ul>
         </div>
       </nav>
-      <router-view/>
+      <div class="margint65">
+        <router-view/>
+      </div>
     </main>
 
 
-
-<footer class="col-lg-12 col-md-12 col-sm-12 col-xs-12 footerPage">
-
-		<div class="container">
-
-			<!-- Redes Sociales Footer -->
-
-			<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 redesFooter">
-
-
-
-				<a href="https://www.facebook.com/elpixelmarketing/" target="_blank"><div class="fFooter"><i class="fa fa-facebook" aria-hidden="true"></i></div></a>		<!-- Facebook -->
-
-				<a href="https://twitter.com/elpixel" target="_blank"><div class="tFooter"><i class="fa fa-twitter" aria-hidden="true"></i></div></a>		<!-- Twitter -->
-
-				<a href="https://www.linkedin.com/company/elpixel-agencia-de-marketing-digital" target="_blank"><div class="lFooter"><i class="fa fa-linkedin" aria-hidden="true"></i></div></a>		<!-- Linkedin -->
-
-                <a href="https://www.behance.net/el-pixel" target="_blank"><div class="lFooter"><i class="fa fa-behance" aria-hidden="true"></i></div></a>		<!-- Behance -->
-
-				<a href="http://blog.elpixel.com" target="_blank"><div class="bFooter"><i class="fa fa-comment" aria-hidden="true"></i></div></a>		<!-- B -->
-
-
-
-			</div> <!-- / redes sociales footer -->
-
-		</div>
-
-	</footer>
+<footer class="bg-black">
+        <div class="footer-bottom">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="offset-md-2 col-md-8  offset-sm-2 col-sm-8 text-center">
+                        <span class="font-size13 text-uppercase letter-spacing-1 text-light-gray">© 2019 MCM is powered by Gaston Frias</span>
+                    </div>
+                    <div class="col-md-2 col-sm-2 text-center">
+                        <a href="https://www.facebook.com/Gastitan?__tn__=%2CdK-R-R&amp;eid=ARDr0pmMMgh0hdXXlokvUJSAXEQDmHpIafOZzy0rIYVbpI58EImc9UOFB4kEyNsM6dyX3iMoNat7LC0M&amp;fref=mentions" target="_blank">
+                            <div class="iconFooter">
+                                <i class="fab fa-facebook-f"></i>
+                            </div>
+                        </a>
+                        <a href="https://www.facebook.com/Gastitan?__tn__=%2CdK-R-R&amp;eid=ARDr0pmMMgh0hdXXlokvUJSAXEQDmHpIafOZzy0rIYVbpI58EImc9UOFB4kEyNsM6dyX3iMoNat7LC0M&amp;fref=mentions" target="_blank">
+                            <div class="iconFooter">
+                                <i class="fab fa-linkedin-in"></i>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
 
 
     <!--<footer class="container-fluid footer text-left mt-3">
@@ -181,7 +169,7 @@ export default {
   color: #2c3e50;
 }
 #nav {
-  padding: 15px;
+  padding: 0 15px;
   a {
     font-weight: bold;
     color: #2c3e50;
@@ -197,6 +185,7 @@ html {
 }
 .container {
   max-width: 100%;
+  padding:0px;
 }
 .footer {
   position: relative;
@@ -283,5 +272,76 @@ a {
     font-size: 50px;
     text-align: center;
 }
+.bg-black{
+  background-color: #000;
+}
+.footer-bottom {
+    padding: 25px 0px;
+}
+.text-center {
+    text-align: center!important;
+}
+.font-size13 {
+    font-size: 13px;
+    line-height: normal;
+}
+.text-uppercase {
+    text-transform: uppercase!important;
+}
+.text-light-gray {
+    color: #d6d5d5;
+}
+.letter-spacing-1 {
+    letter-spacing: 1px;
+}
+.text-uppercase {
+    text-transform: uppercase!important;
+}
+.iconFooter {
+    display: inline-block;
+    padding: 0 10px;
+    font-size: 16px;
+}
 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a{
+  color: #2c3e50!important;
+}
+
+a.router-link-exact-active, a:hover{
+  color:#fd5656!important;
+}
+
+a > div.iconFooter{
+  color: #fff;
+}
+
+.fixed-top {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 1030;
+}
+
+.bg-light {
+    background-color: #f8f9fa!important;
+}
+
+.margint65{
+  margin: 65px 0 0;
+}
+
+.padding15{
+  padding: 15px;
+}
+
+.paddingtb15{
+  padding: 15px 0!important;
+}
 </style>
