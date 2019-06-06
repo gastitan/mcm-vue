@@ -50,7 +50,7 @@
       <div class="form-group">
         <button type="submit" class="btn btn-primary" :disabled="submitting">
           <span v-if="submitting">Enviando <img src="../assets/loader.svg" /></span>
-          <span v-else>Enviando</span>
+          <span v-else>Enviar</span>
         </button>
       </div>
     </form>
@@ -106,9 +106,6 @@
 
 <script>
 import { required, email, maxLength } from 'vuelidate/lib/validators';
-//import axios from 'axios';
-//import Vue from 'vue';
-//import { log } from 'util';
 
 export default {
   name: 'contact',
@@ -132,7 +129,7 @@ export default {
   },
   methods: {
     submit() {
-      this.$v.$touch();
+      //this.$v.$touch();
       if (!this.$v.$error) {
         this.sendFormData();
       } else {
@@ -146,15 +143,16 @@ export default {
       this.submitting = false;
     },
     sendFormData() {
-      this.enableSubmitLoader();
-      /*axios.post(Vue.config.formApiUrl, this.form).then(response => {
-        this.submitSuccess(response);
-        this.disableSubmitLoader();
-      }).catch(error => {
-        this.submitError(error);
-        this.disableSubmitLoader();
-      });*/
-      console.log('sendFormData');
+        this.enableSubmitLoader();
+        axios
+          .post(`${process.env.VUE_APP_BASE_URL}/mail`, this.form)
+          .then(response => {
+            this.submitting = false;
+          })
+          .catch(error => {
+            console.log(error)
+            this.submitting = false;
+          })
     },
     submitSuccess(response) {
       if (response.data.success) {
