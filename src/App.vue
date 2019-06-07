@@ -24,9 +24,9 @@
             <li class="nav-item">
               <router-link to="/products" class="nav-link">Productos</router-link>
             </li>
-            <li class="nav-item">
+            <!--li class="nav-item">
               <a class="nav-link" href="#">Precios</a>
-            </li>
+            </li-->
             <li class="nav-item">
               <router-link to="/contact" class="nav-link">Contactanos</router-link>
             </li>
