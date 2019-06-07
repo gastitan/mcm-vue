@@ -10,27 +10,23 @@
         </div>
         <div class="modal-body">
           <img
-            src="https://avatars1.githubusercontent.com/u/17190913?s=460&v=4"
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRpDsauBDmm1oMeiTSl1xRQkf1GhrW3OrLfJSAiw1q4rJNZ-P7p"
             name="aboutme"
-            width="140"
-            height="140"
+            width="200"
+            height="200"
             border="0"
             class="avatar"
           >
-          <h3 class="media-heading">Mohammed Ismail</h3>
+          <h3 class="media-heading">Moya Cristina</h3>
           <h6>
-            <strong>ikismail7@gmail.com</strong>
-          </h6>
-          <h6>
-            <a href="https://ikismail.github.io/" target="_blank">ikismail.github.io</a>
-            <strong></strong>
+            <strong>Completar la info de la empresa</strong>
           </h6>
 
-          <span class="badge badge-warning p-2 m-1">Angular</span>
-          <span class="badge badge-primary p-2 m-1">Vuejs</span>
-          <span class="badge badge-secondary p-2 m-1">React</span>
-          <span class="badge badge-success p-2 m-1">Github</span>
-          <span class="badge badge-danger p-2 m-1">RestService</span>
+          <span class="badge badge-warning p-2 m-1">Matafuegos</span>
+          <span class="badge badge-primary p-2 m-1">Seguridad</span>
+          <span class="badge badge-secondary p-2 m-1">Carteles</span>
+          <span class="badge badge-success p-2 m-1">Recargas</span>
+          <span class="badge badge-danger p-2 m-1">Mantenimiento</span>
           <!-- <hr> -->
           <!-- <p class="text-left">
             <strong>Bio:</strong>
