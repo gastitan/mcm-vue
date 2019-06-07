@@ -2,9 +2,20 @@
   <div id="app" class="container" style="margin:0; background: #efefef;">
     <main>
       <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top" id="nav">
-        <router-link to="/" class="navbar-brand " >
+        
           <h1>MCM</h1>
-        </router-link>
+        
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarText"
+          aria-controls="navbarText"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
         <div class="collapse navbar-collapse" id="navbarText">
           <ul class="navbar-nav mr-auto">
             <li class="nav-item active">
