@@ -1,32 +1,23 @@
 <template>
   <div class="cart-products">
-    <div class="row mt-5">
-      <div class="col">
-        <div class="row">
+    <div class="row mt-5 padding-borders">
+      <div class="col padding-top ">
+        <div>
           <template v-if="cartProducts.length > 0">
-            <div class="col-md-4" v-for="(item, index) in cartProducts" :key="index">
-              <div class="card mb-4 shadow-sm" style="height: 410px">
-                <img
-                  class="card-img-top mt-2"
-                  v-bind:src="item.productImage"
-                  alt="Card image cap"
-                  style="max-height: 700px; max-width: 127.135px;margin: auto"
-                >
-                <div class="card-body">
-                  <h6 class="card-text">{{item.productName}}.</h6>
-                  <div class="d-flex justify-content-between align-items-center">
-                    <div class="btn-group">
-                      <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                    </div>
-                    <small class="text-muted footerIcons">
-                      <a href="javascript:;;" class="p-2" v-on:click="removeProductCart(item)">
-                        <i class="fa fa-trash"></i>
-                      </a>
-                    </small>
+            
+                <div class="card mb-3 " v-for="(item, index) in cartProducts" :key="index" style="heigth: 100px; width:100%">
+                  <img class="card-img-left" :src="item.productImage" alt="Card image cap" style="max-width:100px; max-height:100px;">
+                  <div class="card-body">
+                    <h5 class="card-title">{{item.name}}</h5>
+                    <h5 class="card-title">$ {{item.price}}</h5>
                   </div>
+                  <small class="text-muted footerIcons">
+                    <a href="javascript:;;" class="p-2" v-on:click="removeProductCart(item)">
+                      <i class="fa fa-trash"></i>
+                    </a>
+                  </small>
                 </div>
-              </div>
-            </div>
+
           </template>
           <template v-else>
             <div class="error-template container">
@@ -43,11 +34,15 @@
           </template>
         </div>
       </div>
-      <div class="col-4">
+      
+      <div class="col-4 padding-top">
+        <label for="isDelivery">Quiero me lo envíen a mi domicilio</label>
+        <input type="checkbox" id="isDelivery" v-model="isDelivery">
         <cart-calculator ref="cartCalculator"></cart-calculator>
         <ul class="list-group mb-3">
-          <router-link to="/products" class="btn btn-primary mt-2 text-white">Continue Shipping</router-link>
-          <router-link to="/checkout" class="btn btn-danger mt-2 text-white">Checkout</router-link>
+          <router-link to="/products" class="btn btn-primary mt-2 text-white">Continuar comprando</router-link>
+          <router-link v-if="isDelivery" to="/delivery" class="btn btn-danger mt-2 text-white">Datos de envío</router-link>
+          <router-link v-else to="/payment" class="btn btn-danger mt-2 text-white">Finalizar compra</router-link>
         </ul>
       </div>
     </div>
@@ -61,7 +56,9 @@ export default {
   name: 'CartProducts',
   components: { CartCalculator },
   data () {
-    return {}
+    return {
+      isDelivery: false
+    }
   },
   computed: mapState(['cartProducts']),
   methods: {
@@ -97,5 +94,14 @@ export default {
 
 .error-actions .btn {
   margin-right: 10px;
+}
+
+.padding-top {
+  padding-top: 30px;
+}
+
+.padding-borders {
+  padding-left: 20px;
+  padding-right: 20px;
 }
 </style>

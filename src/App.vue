@@ -1,7 +1,7 @@
 <template>
   <div id="app" class="container" style="margin:0; background: #efefef;">
     <main>
-      <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top" id="nav">
+      <nav class="navbar navbar-expand-lg bg-light fixed-top" id="nav">
         
           <h1>MCM</h1>
         
@@ -24,9 +24,6 @@
             <li class="nav-item">
               <router-link to="/products" class="nav-link">Productos</router-link>
             </li>
-            <!--li class="nav-item">
-              <a class="nav-link" href="#">Precios</a>
-            </li-->
             <li class="nav-item">
               <router-link to="/contact" class="nav-link">Contactanos</router-link>
             </li>
@@ -98,25 +95,6 @@
             </div>
         </div>
     </footer>
-
-
-    <!--<footer class="container-fluid footer text-left mt-3">
-      <p class="mr-auto">
-        Developed by:
-        <strong>Gastitan</strong>
-      </p>
-      <div style="float:right">
-        <a href="mailto:gastone.frias@gmail.com" style="margin-right:10px">
-          <i class="fa fa-envelope-open" aria-hidden="true" style="font-size:20px"></i>
-        </a>
-        <!--a href="https://github.com/ikismail" target="_blank" style="margin-right:10px">
-          <i class="fa fa-github" aria-hidden="true" style="font-size:20px"></i>
-        </a->
-        <a href="https://www.linkedin.com/in/gaston-frias-086a8214/" target="_blank" style="margin-right:10px">
-          <i class="fa fa-linkedin" aria-hidden="true" style="font-size:20px"></i>
-        </a>
-      </div>
-    </footer>-->
   </div>
 </template>
 

@@ -52,7 +52,7 @@ export default {
             }),
             'productCategory'
           )
-          this.categories.unshift({ productCategory: 'All' })
+          this.categories.unshift({ productCategory: 'Todos' })
 
           this.sellers = _.uniqBy(
             _.map(this.products_list, function (object) {
@@ -60,7 +60,7 @@ export default {
             }),
             'productSeller'
           )
-          this.sellers.unshift({ productSeller: 'All' })
+          this.sellers.unshift({ productSeller: 'Todos' })
         })
         .catch(error => {
           console.log(error)
@@ -70,7 +70,7 @@ export default {
     filterProductBy (event, productFilterID) {
       const productList = [...this.products_list]
       let filteredData = []
-      if (event.target.value !== 'All') {
+      if (event.target.value !== 'Todos') {
         productList.map(product => {
           if (product[productFilterID] === event.target.value) {
             filteredData.push(product)

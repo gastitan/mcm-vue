@@ -52,9 +52,9 @@ export default new Router({
     }
   },
   {
-    path: '/checkout',
-    name: 'checkout',
-    component: () => import('./components/products/cart/Checkout.vue'),
+    path: '/delivery',
+    name: 'delivery',
+    component: () => import('./components/products/cart/Delivery.vue'),
     beforeEnter: (to, from, next) => {
       if (isLoggedIn()) {
         next()
@@ -74,13 +74,23 @@ export default new Router({
     component: () => import('./views/login.vue')
   },
   {
+    path: '/payment',
+    name: 'payment',
+    component: () => import('./views/Payment.vue')
+  },
+  {
     path: '/contact',
     name: 'contact',
     component: () => import('./views/contact.vue')
   },
   {
-    path: '/thank-you',
+    path: '/thankyou',
     name: 'thankyou',
+    component: () => import('./views/thankyou.vue')
+  },
+  {
+    path: '/payment2',
+    name: 'payment2',
     component: () => import('./views/thankyou.vue')
   }
   ]

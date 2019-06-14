@@ -59,8 +59,8 @@ export default {
   computed: mapState(['loggedUser']),
   data () {
     return {
-      selectedCategory: 'All',
-      selectedSeller: 'All',
+      selectedCategory: 'Todos',
+      selectedSeller: 'Todos',
       showCreateProductModal: false
     }
   },

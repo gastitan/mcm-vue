@@ -1,7 +1,7 @@
 <template>
   <div class="cart-products">
-    <div class="row mt-5">
-      <div class="col-sm-8">
+    <div class="row mt-5 padding-borders">
+      <div class="col-sm-8 padding-top">
         <form id="productCU">
           <!-- <p v-if="errors.length">
                   <b>Please correct the following error(s):</b>
@@ -17,26 +17,23 @@
               id="productName"
               name="productName"
               aria-describedby="emailHelp"
-              placeholder="Enter Address"
             >
           </div>
           <div class="form-group">
             <label for="productCategory">Address 2</label>
             <input
-              type="password"
+              type="text"
               class="form-control"
               id="productCategroyDummy"
-              placeholder="Password"
               name="productCategroyDummy"
             >
           </div>
           <div class="form-group">
             <label for="productSeller">Country</label>
             <input
-              type="password"
+              type="text"
               class="form-control"
               id="productSellerDummy"
-              placeholder="Password"
               name="productSellerDummy"
             >
           </div>
@@ -45,10 +42,9 @@
               <div class="form-group">
                 <label for="productRating">Zip code</label>
                 <input
-                  type="password"
+                  type="number"
                   class="form-control"
                   id="productRating"
-                  placeholder="Password"
                 >
               </div>
             </div>
@@ -63,12 +59,8 @@
       <div class="col-sm-4">
         <cart-calculator ref="cartCalculator"></cart-calculator>
         <ul class="list-group mb-3">
-          <router-link to="/products" class="btn btn-primary mt-2 text-white">Continue Shipping</router-link>
-          <a
-            href="javascript:;;"
-            class="btn btn-success mt-2 text-white"
-            @click="createShippingDetail"
-          >Save & Pay</a>
+          <router-link to="/products" class="btn btn-primary mt-2 text-white">Continuar comprando</router-link>
+          <router-link to="/payment" class="btn btn-success mt-2 text-white">Finalizar compra</router-link>
         </ul>
       </div>
     </div>
@@ -81,7 +73,7 @@ import CartCalculator from './CartCalculator'
 import axios from 'axios'
 import { errorToaster } from '../../shared/service/ErrorHandler.js'
 export default {
-  name: 'Checkout',
+  name: 'Delivery',
   components: { CartCalculator },
   data () {
     return {
@@ -98,7 +90,9 @@ export default {
     }
   },
   methods: {
-    createShippingDetail () {}
+    createShippingDetail () {
+      console.log("Se paga y se envia a node")
+    }
   }
 }
 </script>
@@ -116,5 +110,14 @@ export default {
       text-align: center;
     }
   }
+}
+
+.padding-top {
+  padding-top: 30px;
+}
+
+.padding-borders {
+  padding-left: 20px;
+  padding-right: 20px;
 }
 </style>
