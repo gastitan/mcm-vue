@@ -1,7 +1,7 @@
 # MCM
-MCM Front-end
+MCM Ecommerce web site
 
-# Ecommerce web site built with
+# Front-end built with
 - Vue.js
 - Express
 - Vuex
