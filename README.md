@@ -1,5 +1,12 @@
-# mcm-vue
-mcm vue
+# MCM
+MCM Front-end
 
-# Run
+# Ecommerce web site built with
+- Vue.js
+- Express
+- Vuex
+- Toastr
+- Axios
+
+## Run
 npm run serve
